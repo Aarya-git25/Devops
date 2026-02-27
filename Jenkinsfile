@@ -15,9 +15,7 @@ pipeline {
 
         stage('Build with Maven') {
             steps {
-                dir('hello-world') {
-                    bat 'mvn clean package'
-                }
+                bat 'mvn clean package'
             }
         }
 
@@ -30,8 +28,8 @@ pipeline {
                         url: 'http://localhost:8081'
                     )
                 ],
-                contextPath: 'hello-world',
-                war: 'target/hello-world.war'
+                contextPath: '',
+                war: 'target/*.war'
             }
         }
     }

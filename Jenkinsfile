@@ -31,7 +31,7 @@ pipeline {
                     )
                 ],
                 contextPath: 'hello-world',
-                war: 'hello-world/target/hello-world.war'
+                war: 'target/hello-world.war'
             }
         }
     }
